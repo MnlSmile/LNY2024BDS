@@ -4,7 +4,7 @@ import json
 import time  
 import requests
 
-with open('./config.json', 'r') as f:
+with open('./lnyc_config.json', 'r') as f:
     config = json.load(f)
 uuid = config['uuid']
 remote_uuid = config['remote_uuid']

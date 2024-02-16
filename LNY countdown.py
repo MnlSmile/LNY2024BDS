@@ -1,11 +1,14 @@
 import datetime  
 import threading
+import json
 import time  
 import requests
 
-uuid = ""
-remote_uuid = ""
-apikey = ""
+with open('./config.json', 'r') as f:
+    config = json.load(f)
+uuid = config['uuid']
+remote_uuid = config['remote_uuid']
+apikey = config['apikey']
 
 new_year_date = datetime.date.today() + datetime.timedelta(days=1)  
 new_year_time = datetime.datetime.combine(new_year_date, datetime.time.min)  
